@@ -1,6 +1,20 @@
 version: '2'
 
 services:
+  ruby-app:
+    build: ./ruby-app
+    environment:
+      - DATASTORE_EMULATOR_HOST_PATH=datastore:8181/datastore
+      - DATASTORE_EMULATOR_HOST=datastore:8181
+      - DATASTORE_DATASET=datastore-playground
+      - DATASTORE_PROJECT_ID=datastore-playground
+    volumes:
+      - ./ruby-app:/app
+    links:
+      - datastore
+    depends_on:
+      - datastore
+
   datastore:
     image: vyper/gcd-grpc
     ports:
