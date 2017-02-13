@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  datastore:
+    image: vyper/gcd-grpc
+    ports:
+      - 8181:8181
