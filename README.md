@@ -1,6 +1,8 @@
 datastore-playground
 ====================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/adilsoncarvalho/datastore-playground.svg)](https://greenkeeper.io/)
+
 This is a collection of source code to play with [Google Datastore][0] on a few languages that I'm interested about.
 
 Datastore is an _sugar layer_ on top of [Google BigTable][1] making it easier to use as it adds features commonly available on other DBMS.
